@@ -37,23 +37,22 @@ Project: Todo list application
 * Memory database used and API https://api.mathjs.org/ for calling 3rd party dependency.
 
 ## The Client
-You can run the solution in VS or to write in console
-
-dotnet run --project ./ClientApp/ClientApp.csproj
-
-open: https://localhost:5001/#/todo
+You can run the solution in VS and open: https://localhost:5001/#/todo
 
 
 ## The Server
-You can run the solution in VS or to write in console
-
-dotnet run --project ./GAInsights/GAInsights.csproj
-
-open: https://localhost:5003/swagger/index.html
+You can run the solution in VS and open: https://localhost:5003/swagger/index.html
 
 <p align="center">
   <img alt="Server" src="https://github.com/felixcabreraranklin/GAInsights/blob/master/Documentation/b.png?raw=true">
 </p>
+
+#### NOTE:
+if the server-domain changes then you should update the config.js of client in
+ClientApp/wwwroot/application/config.js line 5
+  ...
+  var url = "https://localhost:5003/"; //var url = "https://gainsights.com/";
+  ...
 
 
 
