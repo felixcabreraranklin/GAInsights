@@ -1,6 +1,6 @@
 # GAInsights
 <p align="center">
-  <img alt="Client" src="https://github.com/felixcabreraranklin/GAInsights/a.png">
+  <img alt="Client" src="/felixcabreraranklin/GAInsights/blob/master/Documentation/a.png?raw=true">
 </p>
 
 Project: Todo list application
@@ -30,14 +30,16 @@ o If you use Blazor Wasm or Server-side(Server-side)Project: Todo list applicati
 
 ## The Client
 You can run the solution in VS or to write in consele
+
 dotnet run --project ./ClientApp/ClientApp.csproj
+
 
 ## The Server
 You can run the solution in VS or to write in consele
 dotnet run --project ./GAInsights/GAInsights.csproj
 
 <p align="center">
-  <img alt="Server" src="https://github.com/felixcabreraranklin/GAInsights/b.png">
+  <img alt="Server" src="/felixcabreraranklin/GAInsights/blob/master/Documentation/b.png?raw=true">
 </p>
 
 
