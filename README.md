@@ -33,11 +33,15 @@ You can run the solution in VS or to write in consele
 
 dotnet run --project ./ClientApp/ClientApp.csproj
 
+open: https://localhost:5001/#/todo
+
 
 ## The Server
 You can run the solution in VS or to write in consele
 
 dotnet run --project ./GAInsights/GAInsights.csproj
+
+open: https://localhost:5003/swagger/index.html
 
 <p align="center">
   <img alt="Server" src="https://github.com/felixcabreraranklin/GAInsights/blob/master/Documentation/b.png?raw=true">
