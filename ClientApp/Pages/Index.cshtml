@@ -1,0 +1,108 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tencon3 - Backend</title>
+    <link rel="stylesheet" type="text/css" href="/application/statics/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/application/statics/css/lobibox/lobibox.min.css">
+    <link rel="stylesheet" type="text/css" href="/application/statics/css/font-awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/application/statics/css/app.css">
+    <link rel="stylesheet" type="text/css" href="/application/statics/css/menu.css">
+    <link rel="stylesheet" type="text/css" href="/application/statics/css/sweetalert/sweetalert.css">
+    <style type="text/css">
+        .modal-xlg {
+            max-width: 80%;
+        }
+    </style>
+</head>
+<body class="pushed" data-ng-controller="appController">
+
+<div data-ng-if="isLoading"
+     style="position:fixed;top:0;left:0;width:100%;height:100%;background: #34495E;opacity: 0.75;z-index: 9999;">
+    <div style="position: relative;width:100%;height: 100%;">
+        <img src="/application/statics/svg/oval.svg" width="50" alt="" style="position: absolute;top:50%;left:50%;">
+    </div>
+</div>
+
+<ui-login data-ui-open="loginRequire"></ui-login>
+
+<div class="navigator-menu clearfix">
+    <div class="float-left">
+        <ul>
+            <li>
+                <a href="" class="link-hamburger">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="float-left"><h1 style="margin-top: 10px; color: #007bff"><i class="fa fa-building"></i> <span class="hidden-only-initial" style="display: none;">GAInsights {{ models.company_name }}</span></h1></div>
+    <div class="float-right">
+        <ul>
+            <li>
+                <a href="" screenfull title="Fullscreen">
+                    <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <ui-account></ui-account>
+            </li>
+            <li id="conection-indicator" style="display: none;">
+                <a data-ng-show="!models.ws" class="conection-indicator" data-toggle="popover" title="Monitoreo Inactivo" data-content="Servicio de Monitoreo Inactivo implica que no se ejecutara las tareas automatizadas. Contactar con el soperte en caso de continuar con el problema.">
+                    <i class="fa fa-exclamation-circle icon-connection-inactive"></i>
+                </a>
+                <a data-ng-show="models.ws" class="conection-indicator" data-toggle="popover" title="Monitoreo Activo" data-content="Usted esta conectado correctamente al sistema de Monitoreo. El sistema comprobara automaticamente el estado de los suscriptores.">
+                    <i class="fa fa-exclamation-circle icon-connection-active"></i>
+                </a>
+            </li>
+           
+        </ul>
+    </div>
+</div>
+
+<div class="content-overlay"></div>
+
+<div class="content-container">
+    <div class="content-inner">
+        <div class="content-view" data-ng-view>
+
+        </div>
+    </div>
+</div>
+
+<div class="sidebar-container">
+    <div class="sidebar-pushed"></div>
+    <div class="sidebar-head">
+        <!--header-->
+        <a href="#/" class="text-center" style="padding-top: 20px;padding-bottom: 20px;">
+            <img style="cursor: pointer;" src="/application/statics/img/logo-white.png" height="50">
+        </a>
+    </div>
+    <div class="sidebar-menu">
+ 
+        <ui-menu></ui-menu>
+
+    </div>
+    <div class="sidebar-footer">
+        <!--footer-->
+    </div>
+</div>
+<script type="text/javascript" src="/application/statics/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="/application/statics/js/app.js"></script>
+<script type="text/javascript" src="/application/statics/js/moment/moment.js"></script>
+<script type="text/javascript" src="/application/statics/js/moment/moment-timezone.js"></script>
+
+<script type="text/javascript" src="/application/statics/js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="/application/statics/js/angular/angular.min.js"></script>
+<script type="text/javascript" src="/application/statics/js/bootstrap/popper.min.js"></script>
+
+<script data-main="/application/main" src="/application/statics/js/require/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+#main-menu-wrapper{
+    padding: 0px;
+    margin: 0px;
+    padding-left: 0px;
+    list-style-type: none;
+    font-weight: 400;
+    font-size: 14px;
+}
+#main-menu-wrapper .menusection {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 40px;
+    padding-left: 24px;
+    margin: 10px 0 0px 0;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+#main-menu-wrapper li a {
+    display: block;
+    line-height: 42px;
+    min-height: 42px;
+    height: auto;
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 5px;
+    clear: both;
+    border-left: 4px solid transparent;
+    white-space: nowrap;
+}
+
+#main-menu-wrapper li a:hover {
+    background-color: rgba(33, 33, 33, 0.1);
+    border-left: 4px solid #ffffff;
+}
+#main-menu-wrapper li a.active {
+    background-color: rgba(33, 33, 33, 0.1);
+    border-left: 4px solid #ffffff;
+}
+
+#main-menu-wrapper .fa {
+    font-size: 14px;
+}
+
+#main-menu-wrapper li a i {
+    display: inline-block;
+    width: 45px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    top: 0px;
+    position: relative;
+}
+
+#main-menu-wrapper li a .arrow {
+    float: right;
+    position: absolute;
+    right: 0px;
+}
+#main-menu-wrapper li a .arrow:before {
+    float: right;
+    margin-top: 1px;
+    margin-right: 20px;
+    display: inline;
+    font-size: 16px;
+    font-family: FontAwesome;
+    height: auto;
+    content: "\f104";
+    font-weight: 300;
+    text-shadow: none;
+    color: #ffffff;
+}
+
+#main-menu-wrapper li.open a {
+    background-color: rgba(33, 33, 33, 0.1);
+    border-left: 4px solid #ffffff;
+}
+
+#main-menu-wrapper li.open a .arrow.open:before {
+    content: "\f107";
+}
+
+#main-menu-wrapper li ul.sub-menu {
+    padding-left: 0px;
+}
+
+#main-menu-wrapper li ul.sub-menu {
+    display: none;
+    list-style-type: none;
+    font-size: 14px;
+    width: 100%;
+}
+
+#main-menu-wrapper li .sub-menu a {
+    color: rgba(174, 178, 183, 1.0);
+    margin-bottom: 1px;
+    padding-left: 55px;
+    border-left: 4px solid transparent;
+}
+#main-menu-wrapper li .sub-menu a {
+    line-height: 36px;
+    min-height: 36px;
+}
+
+#main-menu-wrapper li.open .sub-menu a {
+    border-left: 4px solid transparent;
+}
+
+#main-menu-wrapper li.open .sub-menu a {
+    background-color: transparent;
+    color: #eeeeee;
+}
+
+#main-menu-wrapper li.open .sub-menu a.active, #main-menu-wrapper li.open .sub-menu a:hover, #main-menu-wrapper li .sub-menu a:hover {
+    background-color: rgba(33, 33, 33, 0.1);
+    border-left: 4px solid #ffffff;
+}

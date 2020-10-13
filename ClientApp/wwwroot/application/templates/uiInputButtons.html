@@ -1,0 +1,14 @@
+    <div class="form-group">
+    <label>{{uiText}}</label>
+    <div class="input-group">
+      <input type="text" class="form-control" data-ui-quantity data-ng-model="uiModel">
+      <div class="input-group-append">
+        <button class="btn btn-dark  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{uiItem}}</button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" href="" data-ng-repeat="row in uiItems" data-ng-click="onClick.select(row)">
+            {{row}}
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
