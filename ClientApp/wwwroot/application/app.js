@@ -65,6 +65,7 @@ define(['config', 'angular-route', 'angular-resource', 'angular-cookies'], funct
 			var route = routeResolverProvider.resolve;
             $routeProvider.when('/login', route('login'));
             $routeProvider.when('/todo', route('todo'));
+            $routeProvider.when('/math', route('math'));
             $routeProvider.when('/404', route('404'));
 			$routeProvider.when('/', { redirectTo: '/todo' });
 			$routeProvider.otherwise({ redirectTo: '/404' });

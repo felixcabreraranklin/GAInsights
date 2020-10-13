@@ -7,37 +7,49 @@ Project: Todo list application
 
 * Add Items
 
- Name, description, priority (OK)
+ Name, description, priority  <strong>(OK)</strong>
 
-* Remove items (OK)
+* Remove items  <strong>(OK)</strong>
 
-* Store/persist items across sessions (can work on a local emulator) (OK)
+* Store/persist items across sessions (can work on a local emulator)  <strong>(OK)</strong>
 
-* Logs operations for debugging purposes (OK)
+* Logs operations for debugging purposes  <strong>(OK)</strong>
 
 
-- Call 3rd party dependency (any free API of your choice, doesn’t need make sense to the to-do list app (No yet) Cuanl API de tercero me recomiendan.
+* Call 3rd party dependency (any free API of your choice, doesn’t need make sense to the to-do list app <strong>(OK)</strong>
 
-- Technology choice is yours, but please keep it to .Net, .Net Core, Blazor, MVC, Knockoutjs, Razor or AngularJS. (OK) AngularJS y NetCore
+* Technology choice is yours, but please keep it to .Net, .Net Core, Blazor, MVC, Knockoutjs, Razor or AngularJS.  <strong>(OK)</strong><u>AngularJS y NetCore</u>
 
-- Extra points
+### Extra points
 
-o For an SPA implementation with clear separation between API and Client(OK)
-o For unit tests, integrations tests or behavior tests(I need make more)
-o For using CosmosDb for the storage layer(NO)
-o For SOLID code design principles(OK)
-o If you use Blazor Wasm or Server-side(Server-side)Project: Todo list application
+* For an SPA implementation with clear separation between API and Client <strong>(OK)</strong>
+* For unit tests, integrations tests or behavior tests(I need make more)
+* For using CosmosDb for the storage layer <strong>(NO)</strong>
+* For SOLID code design principles <strong>(OK)</strong>
+* If you use Blazor Wasm or Server-side <strong>(Server-side)Project: Todo list application</strong>
+
+### Good practices and extra tasks by the Team.
+* Repository Pattern
+* Unit of Work pattern
+* Separation of concerns (Service, Data access, Common)
+* Swagger for API Documentation
+* Global Error Handling with a middleware
+* Memory database used and API https://api.mathjs.org/ for calling 3rd party dependency.
 
 ## The Client
 You can run the solution in VS or to write in consele
 
 dotnet run --project ./ClientApp/ClientApp.csproj
 
+open: https://localhost:5001/#/todo
+
 
 ## The Server
 You can run the solution in VS or to write in consele
 
 dotnet run --project ./GAInsights/GAInsights.csproj
+
+open: https://localhost:5003/swagger/index.html
 
 <p align="center">
   <img alt="Server" src="https://github.com/felixcabreraranklin/GAInsights/blob/master/Documentation/b.png?raw=true">

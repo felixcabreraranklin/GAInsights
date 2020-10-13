@@ -1,8 +1,12 @@
 <ul id="main-menu-wrapper" data-ng-show="show">
     <li>
-        <a class="active" data-ng-show="hasPermiso('app_todo')" href="#/todo">
+        <a data-ng-class="{'active': !menu_id}" data-ng-click="menu_id=0" data-ng-show="hasPermiso('app_todo')" href="#/todo">
             <i class="fa fa-stream"></i>
             <span class="title">Todo</span>
+        </a>
+        <a data-ng-class="{'active': menu_id == 1}" data-ng-click="menu_id=1" data-ng-show="hasPermiso('app_todo')" href="#/math">
+            <i class="fa fa-cog"></i>
+            <span class="title">MathJS 3rd API</span>
         </a>
     </li>
 </ul>

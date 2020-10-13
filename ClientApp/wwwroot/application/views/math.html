@@ -1,0 +1,32 @@
+<ui-heading data-ui-title="MATH">
+    <ui-button class="btn-primary" data-ng-click="onClick.add()"><i class="fa fa-plus" aria-hidden="true"></i> Add MATH</ui-button>
+</ui-heading>
+
+
+
+
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-body">
+					<form novalidate name="frmSearch">
+						<div class="row">
+							<div class="col-9">
+								<div class="form-group">
+									<input type="text" class="form-control" required data-ng-model="models.search.query">
+								</div>
+							</div>
+							<div class="col-3">
+								<ui-button class="col-12 btn-primary" data-ng-disabled="frmSearch.$invalid" data-ng-click="onClick.calculate()"><i class="fa fa-search" aria-hidden="true"></i> Calculate</ui-button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+</div>
