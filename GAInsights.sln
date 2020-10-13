@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAInsights", "GAInsights\GAInsights.csproj", "{E8506C35-161A-42F2-B71E-821AD4DD8283}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAInsights.Common", "GAInsights.Common\GAInsights.Common.csproj", "{2D64DB40-6A62-49CF-974A-7228E1FE8CEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAInsights.Data", "GAInsights.Data\GAInsights.Data.csproj", "{370EEC00-B5C7-426F-8A61-7A5C2D71958B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAInsights.Services", "GAInsights.Services\GAInsights.Services.csproj", "{83CAEFB3-FBCD-4ABF-8E3A-FE9B67AEA3C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAInsights.Tests", "GAInsights.Tests\GAInsights.Tests.csproj", "{0239761F-E428-495F-B745-DB565886D2FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApp", "ClientApp\ClientApp.csproj", "{3AA08CCB-1CF4-4A9C-B652-E80EAE62958A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8506C35-161A-42F2-B71E-821AD4DD8283}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8506C35-161A-42F2-B71E-821AD4DD8283}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8506C35-161A-42F2-B71E-821AD4DD8283}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8506C35-161A-42F2-B71E-821AD4DD8283}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D64DB40-6A62-49CF-974A-7228E1FE8CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D64DB40-6A62-49CF-974A-7228E1FE8CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D64DB40-6A62-49CF-974A-7228E1FE8CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D64DB40-6A62-49CF-974A-7228E1FE8CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{370EEC00-B5C7-426F-8A61-7A5C2D71958B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{370EEC00-B5C7-426F-8A61-7A5C2D71958B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{370EEC00-B5C7-426F-8A61-7A5C2D71958B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{370EEC00-B5C7-426F-8A61-7A5C2D71958B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83CAEFB3-FBCD-4ABF-8E3A-FE9B67AEA3C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83CAEFB3-FBCD-4ABF-8E3A-FE9B67AEA3C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83CAEFB3-FBCD-4ABF-8E3A-FE9B67AEA3C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83CAEFB3-FBCD-4ABF-8E3A-FE9B67AEA3C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0239761F-E428-495F-B745-DB565886D2FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0239761F-E428-495F-B745-DB565886D2FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0239761F-E428-495F-B745-DB565886D2FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0239761F-E428-495F-B745-DB565886D2FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AA08CCB-1CF4-4A9C-B652-E80EAE62958A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AA08CCB-1CF4-4A9C-B652-E80EAE62958A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AA08CCB-1CF4-4A9C-B652-E80EAE62958A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AA08CCB-1CF4-4A9C-B652-E80EAE62958A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {49921F00-482E-4529-BE9A-474C8B4F0173}
+	EndGlobalSection
+EndGlobal

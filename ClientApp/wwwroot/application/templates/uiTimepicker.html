@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-md-12">
+    <select class="custom-select" data-ng-change="onChange.timer()" data-ng-model="models.hour" data-ng-options="p for p in models.hours" style="width: 30%;"></select>
+    <span>:</span>
+    <select class="custom-select" data-ng-change="onChange.timer()" data-ng-model="models.minute"data-ng-options="p for p in models.minutes" style="width: 30%;"></select> 
+    <select class="custom-select" data-ng-change="onChange.timer()" data-ng-if="uiMeridian" data-ng-model="models.meridian"data-ng-options="p for p in models.meridians" style="width: 30%;"></select> 
+  </div>
+</div>

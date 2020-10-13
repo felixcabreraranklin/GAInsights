@@ -1,0 +1,141 @@
+<ui-heading data-ui-title="TODO">
+    <ui-button class="btn-primary" data-ng-click="onClick.add()"><i class="fa fa-plus" aria-hidden="true"></i> Add TODO</ui-button>
+</ui-heading>
+
+
+
+
+<div class="container-fluid">
+
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-body">
+					<form novalidate name="frmSearch">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Name</label>
+									<input type="text" class="form-control" data-ng-model="models.search.query">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="card-footer text-right">
+					<ui-button data-ng-click="onClick.clear()"><i class="fa fa-times" aria-hidden="true"></i> Clear</ui-button>
+					<ui-button class="btn-primary" data-ng-disabled="frmSearch.$invalid" data-ng-click="onClick.search()"><i class="fa fa-search" aria-hidden="true"></i> Search</ui-button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row mt-5">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header">
+					<h6 class="m-0">TODO List</h6>
+				</div>
+				<div class="card-body p-0">
+
+					<ui-loading data-ui-render="models.loading.todo"></ui-loading>
+
+					<div data-ng-show="!models.loading.todo">
+
+						<ui-no-data data-ng-show="models.list.length===0" data-ui-icon="fa fa-frown-o" data-ui-title="0 Records found" data-ui-message=""></ui-no-data>
+
+						<div data-ng-show="models.list.length > 0">
+
+							<table id="main-table" class="table table-striped table-bordered m-0">
+								<thead>
+									<tr>
+										<th class="text-center">Priority</th>
+										<th class="text-center">Name</th>
+										<th class="text-center">Descripcion</th>
+										<th class="text-center">Actions</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-ng-repeat="row in models.list">
+										<td class="text-center align-middle">
+											<button class="btn" data-ng-class="{'btn-secondary':row.priority==1,'btn-warning':row.priority==2,'btn-danger':row.priority==3}">
+												<i class="fa fa-clock"></i>
+											</button>
+											
+										</td>
+										<td class="align-middle">
+											<span class="label label-danger">{{row.name}}</span>
+										</td>
+                                        <td class="align-middle">
+											<span class="label label-danger">{{row.description}}</span>
+										</td>
+										<td class="text-center align-middle">
+												
+											<a class="btn btn-primary" href="" data-ng-click="onClick.edit(row)"><i class="fa fa-edit" aria-hidden="true"></i></a>
+											<a class="btn btn-danger" href="" data-ng-click="onClick.delete(row)"><i class="fa fa-trash" aria-hidden="true"></i></a>
+										
+											
+										</td>
+									</tr>					    
+								</tbody>
+							</table>
+
+						</div>
+					</div>
+					
+				</div>
+				<div class="card-footer" data-ng-show="models.list.length > 0">
+					<div class="row">
+						<div class="col-md-4 text-left">
+							Show {{models.pagination.rows * (models.pagination.currentPage -1) + 1}} - {{((models.pagination.rows * models.pagination.currentPage) > models.pagination.totalItems) ? models.pagination.totalItems : (models.pagination.rows * models.pagination.currentPage) }} of {{models.pagination.totalItems}} todo(s)
+						</div>
+						<div class="col-md-8">
+							<ul class="pagination justify-content-end" uib-pagination boundary-links="true" items-per-page="models.pagination.rows" total-items="models.pagination.totalItems" ng-model="models.pagination.currentPage" class="pagination-sm" previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;" max-size="models.pagination.maxSize" data-ng-change="onClick.pageChanged()" num-pages="models.pagination.numPages"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div data-ui-modal data-ui-open="models.modal.add.open" data-ui-close="models.modal.add.close">
+		<div data-ui-modal-dialog>
+			<div data-ui-modal-content="{{models.modal.add.title}}">
+				<div data-ui-modal-body>
+					<form novalidate name="frm">
+						<div class="container-fluid p-0">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Priority</label>
+										<div class="col-12 priority-control btn-group">
+											<button data-ng-click="models.entity.priority=1;" class="btn" data-ng-class="{'btn-secondary':models.entity.priority==1}">
+												<span class="">Low</span></button>
+											<button data-ng-click="models.entity.priority=2;" class="btn" data-ng-class="{'btn-secondary':models.entity.priority==2}">
+												<span style="color: orange;">Medium</span></button>
+											<button data-ng-click="models.entity.priority=3;" class="btn" data-ng-class="{'btn-secondary':models.entity.priority==3}">
+												<span style="color: red;">High</span></button>
+										</div>
+										<label>Name(*)</label>
+										<input type="text" class="form-control" name="name" data-ng-model="models.entity.name" data-ng-required="true" data-ng-trim="true" data-ng-class="{'is-invalid':frm.username.$error.required}">
+                                        <label>Description</label>
+                                        <textarea class="form-control" data-ng-model="models.entity.description" name="description" data-ng-trim="true"></textarea>
+									</div>
+								</div>
+                                
+
+                            </div>
+						</div>
+					</form>
+				</div>
+				<div data-ui-modal-footer>
+					<ui-button data-ng-click="models.modal.add.close = true;">Cancelar</ui-button>
+					<ui-button class="btn-primary" data-ng-click="onClick.save(frm)" data-ng-disabled="frm.$invalid"><i class="fa fa-floppy-o" aria-hidden="true"></i> Guardar</ui-button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
