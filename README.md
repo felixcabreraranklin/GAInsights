@@ -18,7 +18,7 @@ Project: Todo list application
 
 * Call 3rd party dependency (any free API of your choice, doesn’t need make sense to the to-do list app <strong>(OK)</strong>
 
-* Technology choice is yours, but please keep it to .Net, .Net Core, Blazor, MVC, Knockoutjs, Razor or AngularJS.  <strong>(OK)</strong><u>AngularJS y NetCore</u>
+* Technology choice is yours, but please keep it to .Net, .Net Core, Blazor, MVC, Knockoutjs, Razor or AngularJS.  <strong>(OK)</strong><u>AngularJS and NetCore</u>
 
 ### Extra points
 
