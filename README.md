@@ -37,7 +37,7 @@ Project: Todo list application
 * Memory database used and API https://api.mathjs.org/ for calling 3rd party dependency.
 
 ## The Client
-You can run the solution in VS or to write in consele
+You can run the solution in VS or to write in console
 
 dotnet run --project ./ClientApp/ClientApp.csproj
 
@@ -45,7 +45,7 @@ open: https://localhost:5001/#/todo
 
 
 ## The Server
-You can run the solution in VS or to write in consele
+You can run the solution in VS or to write in console
 
 dotnet run --project ./GAInsights/GAInsights.csproj
 
